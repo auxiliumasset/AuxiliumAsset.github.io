@@ -64,18 +64,24 @@
         /* Large Top Image (Hero) */
         #hero-image {
             background-image: url('https://github.com/auxiliumasset/AuxiliumAsset.github.io/blob/main/thumbnail.png?raw=true'); /* TODO: Replace with your image URL */
-            height: 100vh;
+            height: 60vh;
             min-height: 400px;
             background-size: cover;
             background-position: center;
-            /* --- CHANGE 1: Added margin to create space below the nav bar --- */
-            margin-top: 90px; 
+            margin-top: 40px; 
         }
         
         /* Sections */
         section {
             padding: 80px 0;
         }
+
+        /* --- THIS IS THE FIX --- */
+        /* Reduces space above the 'About' section */
+        #about {
+            padding-top: 20px;
+        }
+        /* --------------------- */
 
         h2 {
             text-align: center;
@@ -90,7 +96,6 @@
         }
         
         #about p {
-            padding-top: 2px;
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
@@ -143,7 +148,6 @@
             font-size: 1.2em;
             display: block;
             margin-bottom: 8px;
-            /* --- CHANGE 2: Changed feature title color to black --- */
             color: #000000; 
         }
 
@@ -203,6 +207,8 @@
                 <h2>About Auxilium</h2>
                 <p>
                     Auxilium Assets is dedicated to creating professional, high-quality tools and assets that make game development faster, easier, and more fun. We specialize in visual scripting and designer-friendly solutions, empowering creators to build any kind of game or project without needing to code.
+
+
                 </p>
             </div>
         </section>
@@ -211,7 +217,8 @@
             <div class="container">
                 <div class="feature-section">
                     <div class="feature-image">
-                        <img src="https://github.com/auxiliumasset/AuxiliumAsset.github.io/blob/main/Untitled%20design%20(22).png?raw=true"> </div>
+                        <img src="https://github.com/auxiliumasset/AuxiliumAsset.github.io/blob/main/Untitled%20design%20(22).png?raw=true
+" alt="Auxilium Inventory Showcase"> </div>
                     <div class="feature-text">
                         <h3>Auxilium Advanced Inventory</h3>
                         <p>
