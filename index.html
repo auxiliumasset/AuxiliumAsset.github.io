@@ -16,7 +16,7 @@
             padding: 0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #d9d9d9;
-            color: #1a1a1a; /* Dark text for light background */
+            color: #1a1a1a;
             scroll-behavior: smooth;
         }
 
@@ -27,19 +27,9 @@
             padding: 20px;
         }
 
-        /* --- 1. Large Top Image (Hero) --- */
-        #hero-image {
-            /* TODO: Replace 'path/to/your/large-top-image.png' with the URL of your main banner image. */
-            background-image: url('https://github.com/auxiliumasset/AuxiliumAsset.github.io/blob/main/thumbnail.png?raw=true.png');
-            height: 60vh; /* 60% of the viewport height */
-            min-height: 400px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        /* --- 2. Top Panel (Header/Nav) --- */
+        /* --- 1. Top Panel (Header/Nav) --- */
         header {
-            background-color: #ffffff; /* White background */
+            background-color: #ffffff;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -48,18 +38,14 @@
 
         nav {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end; /* Pushes links to the right */
             align-items: center;
             max-width: 1100px;
             margin: 0 auto;
             padding: 15px 20px;
         }
-
-        .logo {
-            font-size: 1.8em;
-            font-weight: bold;
-            color: #1a1a1a;
-        }
+        
+        /* Logo text is removed, so the logo class is no longer needed */
 
         .nav-links a {
             color: #333;
@@ -72,12 +58,20 @@
             transition: all 0.3s ease;
         }
         
-        /* Hover Effect */
         .nav-links a:hover {
             background-color: #d9d9d9;
             color: black;
         }
 
+        /* --- 2. Large Top Image (Hero) --- */
+        #hero-image {
+            background-image: url('https://github.com/auxiliumasset/AuxiliumAsset.github.io/blob/main/thumbnail.png?raw=true'); /* TODO: Replace with your image URL */
+            height: 60vh;
+            min-height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+        
         /* Sections */
         section {
             padding: 80px 0;
@@ -87,31 +81,30 @@
             text-align: center;
             font-size: 2.5em;
             margin-bottom: 50px;
-            font-family: 'Montserrat', sans-serif; /* Custom font for headers */
+            font-family: 'Montserrat', sans-serif;
         }
 
         p {
             line-height: 1.7;
             font-size: 1.1em;
         }
-
-        /* --- About Us Section with Custom Font --- */
+        
         #about p {
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
-            font-family: 'Montserrat', sans-serif; /* Custom font for this text */
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.3em;
         }
 
         /* --- 3. Mid-Down Section (Image + Text) --- */
         .feature-section {
             display: flex;
-            align-items: center;
+            align-items: flex-start; /* Aligns text to the top */
             gap: 50px;
         }
         .feature-image {
-            flex-basis: 55%; /* Image takes up a bit more space */
+            flex-basis: 55%;
         }
         .feature-image img {
             width: 100%;
@@ -128,9 +121,33 @@
             margin-top: 0;
         }
 
-        /* --- 4. Social Links at the Bottom --- */
-        #contact {
+        /* --- 4. New Feature List Below Showcase --- */
+        .feature-list-container {
+            margin-top: 60px; /* Space between showcase and list */
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .feature-list li {
             background-color: #ececec;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .feature-list strong {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: 8px;
+            color: #007bff;
+        }
+
+        /* --- 5. Social Links at the Bottom --- */
+        #contact {
+            background-color: #ffffff;
             text-align: center;
         }
         #contact p {
@@ -147,7 +164,6 @@
             text-decoration: underline;
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 20px;
@@ -155,7 +171,6 @@
             color: #777;
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .feature-section {
                 flex-direction: column;
@@ -163,21 +178,13 @@
             .nav-links {
                 display: none;
             }
-            .logo {
-                width: 100%;
-                text-align: center;
-            }
         }
-
     </style>
 </head>
 <body>
 
-    <div id="hero-image"></div>
-
     <header>
         <nav>
-            <div class="logo">Auxilium Assets</div>
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#feature-spotlight">Features</a>
@@ -185,6 +192,8 @@
             </div>
         </nav>
     </header>
+    
+    <div id="hero-image"></div>
 
     <main>
         <section id="about">
@@ -197,23 +206,55 @@
         </section>
 
         <section id="feature-spotlight">
-            <div class="container feature-section">
-                <div class="feature-image">
-                    <img src="https://github.com/auxiliumasset/AuxiliumAsset.github.io/blob/main/Untitled%20design%20(22).png?raw=true" alt="Auxilium Inventory Showcase">
+            <div class="container">
+                <div class="feature-section">
+                    <div class="feature-image">
+                        <img src="https://github.com/auxiliumasset/AuxiliumAsset.github.io/blob/main/Untitled%20design%20(22).png?raw=true" alt="Auxilium Inventory Showcase"> </div>
+                    <div class="feature-text">
+                        <h3>Auxilium Advanced Inventory</h3>
+                        <p>
+                            The ultimate upgrade for Game Creator 2. This extension transforms the standard Grid Bag into a professional, RPG-style system with a unified hotbar, equipment panel, advanced sorting, context-menus, and more.
+                        </p>
+                    </div>
                 </div>
-                <div class="feature-text">
-                    <h3>Auxilium Advanced Inventory</h3>
-                    <p>
-                        The ultimate upgrade for Game Creator 2! This extension transforms the standard Grid Bag into a professional, RPG-style system with a unified hotbar, equipment panel, advanced sorting, context-menus, and more.
-                    </p>
+
+                <div class="feature-list-container">
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Unified Equipment Panel</strong>
+                            A modern "direct slot" system for seamless drag-and-drop gearing.
+                        </li>
+                        <li>
+                            <strong>Action-Ready Hotbar</strong>
+                            Fully functional hotbar with customizable keyboard bindings for instant actions.
+                        </li>
+                        <li>
+                            <strong>Context-Aware Menus</strong>
+                            Intelligent right-click menus that only show relevant actions for any item.
+                        </li>
+                        <li>
+                            <strong>Powerful Sorting</strong>
+                            One-click sorting by name, weight, or price that protects your hotbar slots.
+                        </li>
+                         <li>
+                            <strong>Category Filtering</strong>
+                            Filter your inventory by item type using tabs or a dropdown menu.
+                        </li>
+                         <li>
+                            <strong>And much more...</strong>
+                            Smart placement, safety drop system, and dynamic UI displays.
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <section id="contact">
             <div class="container">
-                <h2>Follow & Contact</h2>
-                <p>For support, questions, or to follow development:</p>
+                <h2>Get in Touch</h2>
+                <p>
+                    If you need any help or have questions, drop by in our Discord. You can also follow us on YouTube for upcoming guides on our Assets.
+                </p>
                 <div class="social-links">
                     <a href="mailto:AuxiliumAsset@gmail.com">Email</a>
                     <a href="https://www.youtube.com/@Auxilium-Asset" target="_blank">YouTube</a>
