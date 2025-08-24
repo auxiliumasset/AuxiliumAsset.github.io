@@ -27,7 +27,7 @@
             padding: 20px;
         }
 
-        /* --- 1. Top Panel (Header/Nav) --- */
+        /* Header & Navigation */
         header {
             background-color: #ffffff;
             position: sticky;
@@ -38,14 +38,12 @@
 
         nav {
             display: flex;
-            justify-content: flex-end; /* Pushes links to the right */
+            justify-content: flex-end;
             align-items: center;
             max-width: 1100px;
             margin: 0 auto;
             padding: 15px 20px;
         }
-        
-        /* Logo text is removed, so the logo class is no longer needed */
 
         .nav-links a {
             color: #333;
@@ -63,13 +61,15 @@
             color: black;
         }
 
-        /* --- 2. Large Top Image (Hero) --- */
+        /* Large Top Image (Hero) */
         #hero-image {
-            background-image: url('https://github.com/auxiliumasset/AuxiliumAsset.github.io/blob/main/thumbnail.png?raw=true'); /* TODO: Replace with your image URL */
+            background-image: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); /* TODO: Replace with your image URL */
             height: 60vh;
             min-height: 400px;
             background-size: cover;
             background-position: center;
+            /* --- CHANGE 1: Added margin to create space below the nav bar --- */
+            margin-top: 40px; 
         }
         
         /* Sections */
@@ -97,10 +97,10 @@
             font-size: 1.3em;
         }
 
-        /* --- 3. Mid-Down Section (Image + Text) --- */
+        /* Mid-Down Section (Image + Text) */
         .feature-section {
             display: flex;
-            align-items: flex-start; /* Aligns text to the top */
+            align-items: flex-start;
             gap: 50px;
         }
         .feature-image {
@@ -121,9 +121,9 @@
             margin-top: 0;
         }
 
-        /* --- 4. New Feature List Below Showcase --- */
+        /* Feature List Below Showcase */
         .feature-list-container {
-            margin-top: 60px; /* Space between showcase and list */
+            margin-top: 60px;
         }
         .feature-list {
             list-style: none;
@@ -142,10 +142,11 @@
             font-size: 1.2em;
             display: block;
             margin-bottom: 8px;
-            color: #007bff;
+            /* --- CHANGE 2: Changed feature title color to black --- */
+            color: #000000; 
         }
 
-        /* --- 5. Social Links at the Bottom --- */
+        /* Social Links at the Bottom */
         #contact {
             background-color: #ffffff;
             text-align: center;
@@ -200,7 +201,7 @@
             <div class="container">
                 <h2>About Auxilium</h2>
                 <p>
-                    Auxilium Assets is dedicated to creating professional, high-quality extensions for Game Creator 2. Our goal is to provide powerful, designer-friendly tools that unlock new possibilities and streamline your development workflow.
+                    Auxilium Assets is dedicated to creating professional, high-quality tools and assets that make game development faster, easier, and more fun. We specialize in visual scripting and designer-friendly solutions, empowering creators to build any kind of game or project without needing to code.
                 </p>
             </div>
         </section>
@@ -209,11 +210,11 @@
             <div class="container">
                 <div class="feature-section">
                     <div class="feature-image">
-                        <img src="https://github.com/auxiliumasset/AuxiliumAsset.github.io/blob/main/Untitled%20design%20(22).png?raw=true" alt="Auxilium Inventory Showcase"> </div>
+                        <img src="https://github.com/auxiliumasset/AuxiliumAsset.github.io/blob/main/thumbnail.png?raw=true"> </div>
                     <div class="feature-text">
                         <h3>Auxilium Advanced Inventory</h3>
                         <p>
-                            The ultimate upgrade for Game Creator 2. This extension transforms the standard Grid Bag into a professional, RPG-style system with a unified hotbar, equipment panel, advanced sorting, context-menus, and more.
+                            The ultimate upgrade for Game Creator 2! This powerful extension transforms the standard Inventory Module into a professional, RPG-style, grid-based system packed with features modern games demand: a unified hotbar, equipment panel, advanced sorting, category filtering, right-click context menus, and more.
                         </p>
                     </div>
                 </div>
